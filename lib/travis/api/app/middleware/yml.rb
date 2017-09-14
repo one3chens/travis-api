@@ -10,22 +10,22 @@ class Travis::Api::App
       end
 
       def call(env)
+        if #env['PATH_INFO'] is `/yml` env['REQUEST_TYPE'] is 'POST'
+          begin
+            response = @app.call(env)
 
-        begin
-          response = @app.call(env)
-          request_ended_at = Time.now
-          request_time = request_ended_at - request_started_at
+            yml(env, response, request_time)
 
-          yml(env, response, request_time)
+            response
+          rescue StandardError => e
+            request_time = Time.now
 
-          response
-        rescue StandardError => e
-          request_ended_at = Time.now
-          request_time = request_ended_at - request_started_at
+            yml(env, [500, {}, nil], request_time, e)
 
-          yml(env, [500, {}, nil], request_time, e)
-
-          raise e
+            raise e
+          end
+        else
+          return
         end
       end
 
