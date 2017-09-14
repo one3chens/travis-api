@@ -107,6 +107,9 @@ module Travis::Api
           Travis::Honeycomb.context.add('x_request_id', env['HTTP_X_REQUEST_ID'])
         end
 
+        #mount the travis-yml config parser app
+        use Travis::Api::App::Yml
+
         use Travis::Api::App::Middleware::RequestId
         use Travis::Api::App::Middleware::ErrorHandler
 

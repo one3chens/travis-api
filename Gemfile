@@ -54,6 +54,9 @@ gem 'faraday_middleware'
 
 gem 'knapsack'
 
+# this is for the travis-yml parsing app
+gem 'travis-yml', git: 'https://github.com/travis-ci/travis-yml'
+
 group :test do
   gem 'rspec',         '~> 2.13'
   gem 'rspec-its'
