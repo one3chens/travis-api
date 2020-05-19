@@ -20,9 +20,9 @@ gem 'mustermann'
 gem 'sinatra'
 gem 'sinatra-contrib', require: nil #git: 'https://github.com/sinatra/sinatra-contrib', require: nil
 
-gem 'simple_states',   '1.0.2'
+gem 'simple_states', '1.0.2'
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.9.5'
 gem 'unicorn'
 gem 'sentry-raven'
 gem 'yard-sinatra',    git: 'https://github.com/rkh/yard-sinatra'
@@ -45,7 +45,7 @@ gem 'customerio'
 gem 'redlock'
 gem 'rake', '~> 0.9.2'
 
-gem 'skylight'
+gem 'skylight', '>= 1.3.1'
 gem 'appsignal'
 gem 'libhoney', git: 'https://github.com/honeycombio/libhoney-rb'
 
@@ -57,7 +57,7 @@ gem 'knapsack'
 group :test do
   gem 'rspec',         '~> 2.13'
   gem 'rspec-its'
-  gem 'factory_girl',  '~> 2.4.0'
+  gem 'factory_girl', '~> 2.4.2'
   gem 'mocha',         '~> 0.12'
   gem 'database_cleaner', '~> 0.8.0'
   gem 'timecop',       '~> 0.8.0'
