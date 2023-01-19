@@ -17,8 +17,8 @@ gem 'travis-rollout',  git: 'https://github.com/travis-ci/travis-rollout', branc
 
 gem 'travis-yaml',     git: 'https://github.com/travis-ci/travis-yaml'
 gem 'mustermann'
-gem 'sinatra'
-gem 'sinatra-contrib', require: nil #git: 'https://github.com/sinatra/sinatra-contrib', require: nil
+gem 'sinatra', '>= 2.0.0'
+gem 'sinatra-contrib', '>= 2.0.0', require: nil #git: 'https://github.com/sinatra/sinatra-contrib', require: nil
 
 gem 'simple_states',   '1.0.2'
 
@@ -26,9 +26,9 @@ gem 'active_model_serializers'
 gem 'unicorn'
 gem 'sentry-raven'
 gem 'yard-sinatra',    git: 'https://github.com/rkh/yard-sinatra'
-gem 'rack-contrib'
+gem 'rack-contrib', '>= 2.0.0'
 gem 'rack-cache',      git: 'https://github.com/rtomayko/rack-cache'
-gem 'rack-attack', '5.0.0.beta1'
+gem 'rack-attack', '5.0.0'
 gem 'gh', git: 'https://github.com/travis-ci/gh'
 gem 'bunny',           '~> 0.8.0'
 gem 'dalli'
@@ -57,7 +57,7 @@ gem 'knapsack'
 group :test do
   gem 'rspec',         '~> 2.13'
   gem 'rspec-its'
-  gem 'factory_girl',  '~> 2.4.0'
+  gem 'factory_girl', '~> 2.4.2'
   gem 'mocha',         '~> 0.12'
   gem 'database_cleaner', '~> 0.8.0'
   gem 'timecop',       '~> 0.8.0'
