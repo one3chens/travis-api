@@ -65,7 +65,7 @@ group :test do
 end
 
 group :development do
-  gem 'foreman'
+  gem 'foreman', '>= 0.86.0'
   gem 'rerun'
   gem 'rb-fsevent', '~> 0.9.1'
 end
