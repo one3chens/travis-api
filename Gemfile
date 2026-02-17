@@ -24,7 +24,7 @@ gem 'simple_states',   '1.0.2'
 
 gem 'active_model_serializers'
 gem 'unicorn'
-gem 'sentry-raven'
+gem 'sentry-raven', '>= 3.0.0'
 gem 'yard-sinatra',    git: 'https://github.com/rkh/yard-sinatra'
 gem 'rack-contrib'
 gem 'rack-cache',      git: 'https://github.com/rtomayko/rack-cache'
@@ -49,7 +49,7 @@ gem 'skylight'
 gem 'appsignal'
 gem 'libhoney', git: 'https://github.com/honeycombio/libhoney-rb'
 
-gem 'faraday'
+gem 'faraday', '>= 2.14.1'
 gem 'faraday_middleware'
 
 gem 'knapsack'
